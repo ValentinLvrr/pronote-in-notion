@@ -1,0 +1,73 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoirs</title>
+</head>
+<body>
+
+        <div style="border-color: #C0C0C0;"class="homework">
+            <h4>VIE DE CLASSE</h4>
+            <p>Vie de classe</p>
+        </div>
+        <div style="border-color: #F50A2D;"class="homework">
+            <h4>ANGLAIS LV1</h4>
+            <p>Apporter le manuel + réviser la correction du devoir</p>
+        </div>
+        <div style="border-color: #AC75AE;"class="homework">
+            <h4>FRANCAIS</h4>
+            <p>Bilan par coeur. Répondre aux 4 questions sur les deux premiers extraits. (Illustrer la séquence 4 pour les retardataires). Apporter sa copie de DNB Blanc pour la correction.</p>
+        </div>
+        <div style="border-color: #A49E6C;"class="homework">
+            <h4>MATHEMATIQUES</h4>
+            <p>Leçon du jour + ex 46 et 49 page 105</p>
+        </div>
+<style>
+body {
+    background-color: #fff;
+}
+
+div.homework {
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+    margin-bottom: 10px;
+}
+</style>
+<script>
+const body = document.querySelector('body')
+const divs = document.querySelectorAll('.homework')
+let darkmode = false
+document.addEventListener('keyup', (event) => {
+    if (event.key.length === 1) {
+      if (darkmode == true) {
+        body.style.backgroundColor = "#FFFFFF"
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.backgroundColor = '#191919';
+            divs[i].style.color = '#fff';
+        }
+        darkmode = false
+      } else {
+        body.style.backgroundColor = "#191919"
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.backgroundColor = '#FFFFFF';
+            divs[i].style.color = '#191919';
+        }
+        darkmode = true
+      }
+    } 
+  })
+</script>
+</body>
+</html>
+    
